@@ -1,21 +1,37 @@
 # Add your Python code here. E.g.
 from microbit import *
+#imports the microbit radio library
 import radio
 
+#turns the microbit radio on
 radio.on()
+#sets the channel the radio will transmit at
 radio.config(channel=10)
 
+
 while True:
+    #creates a variable so i dont have to write som much
     gesture = accelerometer.current_gesture()
+    #if the microbit is tilting upwards, send "down"
     if gesture == "face up":
         radio.send("down")
+        
+    #if the microbit is tilting downwards, send "up"
     elif gesture == "face down":
         radio.send("up")
+        
+    #if the microbit is tilting left, send "left"    
     elif gesture == "left":
-        radio.send('a')
+        radio.send("left")
+        
+    #if the microbit is tilting right, send "left"    
     elif gesture == "right":
-        radio.send('d')
+        radio.send("right")
+        
+    #if button a is pressed send "plus"  
     elif button_a.is_pressed():
-        radio.send('+')
+        radio.send("plus)
+        
+    #if button b is pressed send "minus"
     elif button_b.is_pressed():
-        radio.send('-')
+        radio.send("minus")
