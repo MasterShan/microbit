@@ -30,8 +30,12 @@ while True:
         
     #if button a is pressed send "plus"  
     if button_a.is_pressed():
-        radio.send("plus)
+        radio.send("plus")
+        #makes the microbit stop for 0.5 seconds
+        sleep(50)
         
     #if button b is pressed send "minus"
     if button_b.is_pressed():
         radio.send("minus")
+        #makes the microbit stop for 0.5 seconds
+        sleep(50)
