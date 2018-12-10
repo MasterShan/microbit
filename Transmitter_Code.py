@@ -24,7 +24,7 @@ while True:
     elif gesture == "left":
         radio.send("left")
         
-    #if the microbit is tilting right, send "left"    
+    #if the microbit is tilting right, send "right"    
     elif gesture == "right":
         radio.send("right")
         
