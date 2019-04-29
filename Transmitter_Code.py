@@ -76,7 +76,7 @@ while True:
         microbit.display.set_pixel(3, 2, 9)
         radio.send("tr")   
         
-      #if a button is pressed send message and delay  
+      #if a button is pressed, send message and delay  
     if microbit.button_a.was_pressed():
         height += 1
         radio.send("plus")
@@ -86,3 +86,4 @@ while True:
         height -= 1
         radio.send("minus")
         microbit.sleep(50)
+        
